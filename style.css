@@ -1,82 +1,101 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-    background: #000000;
-    color:#000000;
-    background-color: #DFDBE5;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23f4f1f9' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    font-size: 16px;
-}
-
-a{
-color:#000000;
-text-decoration: none;
-}
-ul{
-list-style: none;
-}
-.container {
-    width: 90%;
-    margin: auto;
-}
-
-/*Navegacion*/
-.nav-main {
-  font-size: 17px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  padding: 20px 0;
-
-}
-.nav-brand{
- width: 50px;
- 
-}
-/*NAV IZQUIERA*/
-.nav-main ul{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+      background: #000000;
+      color:#000000;
+      background-color: #DFDBE5;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23f4f1f9' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+      font-size: 16px;
+  }
+  
+  a{
+  color:#000000;
+  text-decoration: none;
+  }
+  ul{
+  list-style: none;
+  }
+  .container {
+      width: 90%;
+      margin: auto;
+  }
+  
+  /*Navegacion*/
+  .nav-main {
+    font-size: 17px;
     display: flex;
-}
-.nav-main ul li{
-    padding: 10px;
-}
-.nav-main ul li a{
-  padding: 6px;
-}
-
-.nav-main ul li a:hover{
-    border-bottom: 2px solid #ffffff;
-}
-
-
-.nav-main ul.nav-menu{
-    flex: 1;
-    margin-left: 20px;
-}
-/*shocase*/
-.showcase {
-    width:  100%;
-    height: 450px;
-    background: url(./img/baner_ejercicio.png) no-repeat center/cover;
-    padding-bottom: 50px;
-    display:flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
+    height: 60px;
+    padding: 20px 0;
+  
+  }
+  .nav-brand{
+   width: 50px;
+   
+  }
+  /*NAV IZQUIERA*/
+  .nav-main ul{
+      display: flex;
+  }
+  .nav-main ul li{
+      padding: 10px;
+  }
+  .nav-main ul li a{
+    padding: 6px;
+  }
+  
+  .nav-main ul li a:hover{
+      border-bottom: 2px solid #ffffff;
+  }
+  
+  
+  .nav-main ul.nav-menu{
+      flex: 1;
+      margin-left: 20px;
+  }
+  /*shocase*/
+  .showcase {
+      width:  100%;
+      height: 350px;
+      background: url(./img/baner_ejercicio.png) no-repeat center/cover;
+      padding-bottom: 50px;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      
+      
+  }
+  .btn{
+      cursor: pointer;
+      display: inline-block;
+      border: 0;
+      font-weight: bold;
+      padding: 10px 20px;
+      background: #262626;
+      color: #ffffff;
+      font-size: 15px;
+      border: 1px solid #ffffff;
+  }
+  .tabla {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    border-collapse: collapse;
+  
+   
+   
+
 }
-.btn{
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    font-weight: bold;
-    padding: 10px 20px;
-    background: #262626;
-    color: #ffffff;
-    font-size: 15px;
-    border: 1px solid #ffffff;
+th,td{
+    padding: 20px;
+}
+thead{
+    background-color: burlywood;
+    border-bottom: solid 5px #262626;
 }
