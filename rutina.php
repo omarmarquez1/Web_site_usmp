@@ -1,3 +1,16 @@
+<?php
+  $conexion = new PDO("sqlsrv:server = dbusmp2022.database.windows.net,1433; Database = DBUSMP", "omarquez14", "Ingeniero123");
+?>
+<?php
+  $cantidad=0;
+  $query="SELECT E.idEst,E.nombreEst,E.apePatEst,E.apeMatEst,C.tiempo,C.distancia,ES.fechaCarr
+    FROM [dbo].[estudiante] E,[DBO].[resultado_carrera] C,[DBO].[est_resul] ES
+    WHERE E.idEst=ES.idEst
+    AND C.idResul=ES.idResul";
+  $stmt=$conexion->query($query) ;
+  $registros =$stmt->fetchAll(PDO::FETCH_OBJ);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +33,13 @@
             <img src="img/brand.png" alt="CHATBOT_USMP LOGO" class="nav-brand">
             <ul class="nav-menu">
                 <li>
-                    <a href="#">Quienes somos?</a>
+                    <a href="quienes_somos.html">Quienes somos?</a>
                 </li>
                 <li>
                     <a href="#">Seguimiento Personalizado</a>
                 </li>
                 <li>
-                    <a href="#">Rutinas</a>
+                    <a href="Rutina.php">Rutina</a>
                 </li>
                 <li>
                     <a href="#">Nutrición</a>
@@ -55,25 +68,47 @@
             </a>
         </header>
     
-      <div class="quienesSomos">
-        <div>
-            
-            <img src="img/quienes_somos.jpg" alt="Quienes somos">
+    <div class="Carreras">
+        <h1>Carreras</h1>
+    <table>
+        <tr>
+           <th>
+             Nombre
+           </th>
+           <th>
+             Apellido Paterno
+           </th>
+           <th>
+             Apellido Materno
+           </th>
+           <th>
+             Tiempo
+           </th>
+           <th>
+             Distancia
+           </th>
+           <th>
+             Fecha Carrera
+           </th>
+       </tr>
+       <?php foreach($registros as $fila) : ?>
+            <?php $cantidad =$cantidad+1 ?>
+       <tr>
+            <td><?php  echo $fila->nombreEst; ?></td>
+            <td><?php  echo $fila->apePatEst; ?></td>
+            <td><?php  echo $fila->apeMatEst; ?></td>
+            <td><?php  echo $fila->tiempo; ?></td>
+            <td><?php  echo $fila->distancia; ?></td>
+            <td><?php  echo $fila->fechaCarr; ?></td>
+       </tr>
+
+        <?php endforeach; ?>
+
+
+</table>
         </div>
-        <div>
-            <h3>QUIENES SOMOS</h3>
-            <br>
-            <p>
-                Somos una empresa que surge con el propósito de brindar no solo un mejor estado de salud y bienestar corporal, 
-                sino de motivación, excelencia y mejora continua. 
-                Apoyados de la tecnología y la ciencia con el acompañamiento continuo de un personal de entrenamiento de alta competitividad
-                en acondicionamiento físico.
-                <br><br>
-                Llevamos años en el mercado y hemos aprendido de cada uno de nuestros usuarios, para así, crear una experiencia inolvidable.</p>
-        </div>
-        
-      </div>  
     
+       
     
     </div>    
     

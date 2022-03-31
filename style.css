@@ -8,7 +8,8 @@
       background: azure;
       color:#ffffff;
       background-color: #000000;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23f4f1f9' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+      background-color: #0c0b0d;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23171518' fill-opacity='0.97' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
       font-size: 15px;
   }
   
@@ -120,4 +121,37 @@ thead{
     text-transform:  uppercase;
     display:  inline-block;
     font-weight: bold;
+}
+.quienesSomos{
+   display: grid;
+   grid-template-columns: 1fr 1fr ;
+   gap: 50px;
+   margin: 50 px 50px;
+   font-style: normal;
+   font-size:  15px; 
+
+
+    font-family: Roboto;
+    font-style: normal;
+    color: beige;
+    opacity: 1;
+    visibility: visible;
+
+}
+.quienesSomos img{
+  width:  100%;
+  height: 300px;
+}
+.Carreras{
+    margin: 50 px auto;
+    width: 600px;
+
+}
+table {
+    background-color: white;
+    text-align: left;
+    width: 100%;
+}
+th,td{
+    border:solid 1 px #ffffff;
 }
